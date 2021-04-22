@@ -1,0 +1,4 @@
+/resources/login.properties
+/.idea/*
+/target/*
+dataMigrationProject.iml
