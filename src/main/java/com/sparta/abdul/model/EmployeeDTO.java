@@ -4,7 +4,7 @@ import java.util.Date;
 
 //filter out duplicate data
 //store it in a collection. one collection has unique data and second collection has duplicate data.
-public class Employee {
+public class EmployeeDTO {
     private int empId;
     private String namePrefix;
     private String firstName;
@@ -16,7 +16,7 @@ public class Employee {
     private Date dateOfJoining;
     private int salary;
 
-    public Employee(int empId, String namePrefix, String firstName, char middleInitial, String lastName, char gender, String eMail, Date dateOfBirth, Date dateOfJoining, int salary){
+    public EmployeeDTO(int empId, String namePrefix, String firstName, char middleInitial, String lastName, char gender, String eMail, Date dateOfBirth, Date dateOfJoining, int salary){
         this.empId = empId;
         this.namePrefix = namePrefix;
         this.firstName = firstName;

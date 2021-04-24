@@ -1,23 +1,23 @@
 package com.sparta.abdul.controller;
 
-import com.sparta.abdul.model.Employee;
+import com.sparta.abdul.model.EmployeeDTO;
 
 import java.util.HashMap;
 
 public class SplitData {
-    private HashMap<Integer,Employee> allData;
-    private HashMap<Integer,Employee> employeeFirstThird = new HashMap<>();
-    private HashMap<Integer,Employee> employeeSecondThird = new HashMap<>();
-    private HashMap<Integer,Employee> employeeThirdThird = new HashMap<>();
+    private HashMap<Integer, EmployeeDTO> allData;
+    private HashMap<Integer, EmployeeDTO> employeeFirstThird = new HashMap<>();
+    private HashMap<Integer, EmployeeDTO> employeeSecondThird = new HashMap<>();
+    private HashMap<Integer, EmployeeDTO> employeeThirdThird = new HashMap<>();
 
-    public SplitData(HashMap<Integer,Employee> allData){
+    public SplitData(HashMap<Integer, EmployeeDTO> allData){
         this.allData = allData;
     }
 
 
     public void splitData(){
         int linePositionCounter = 0;
-        for(HashMap.Entry<Integer, Employee> entry : allData.entrySet()){
+        for(HashMap.Entry<Integer, EmployeeDTO> entry : allData.entrySet()){
             if(linePositionCounter < allData.size()/3) {
                 employeeFirstThird.put(entry.getKey(), entry.getValue());
             }
@@ -30,15 +30,15 @@ public class SplitData {
             linePositionCounter++;
         }
     }
-    public HashMap<Integer, Employee> getEmployeeFirstThird() {
+    public HashMap<Integer, EmployeeDTO> getEmployeeFirstThird() {
         return employeeFirstThird;
     }
 
-    public HashMap<Integer, Employee> getEmployeeSecondThird() {
+    public HashMap<Integer, EmployeeDTO> getEmployeeSecondThird() {
         return employeeSecondThird;
     }
 
-    public HashMap<Integer, Employee> getEmployeeThirdThird() {
+    public HashMap<Integer, EmployeeDTO> getEmployeeThirdThird() {
         return employeeThirdThird;
     }
 
